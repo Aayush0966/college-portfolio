@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aayush - Portfolio</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="header">
-        <h1>Aayush</h1>
+        <div class="logo">
+            <h1>Aayush</h1>
+        </div>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <a href="#footer">More</a>
         </nav>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
     <div id="home" class="hero-section">
@@ -29,52 +37,124 @@
                 alt="Aayush's Profile">
         </div>
     </div>
-
     <div id="about" class="section about-section">
-        <h2>About Me</h2>
-        <p>I'm a passionate full-stack developer who loves creating amazing web experiences. I enjoy working with modern
-            technologies and solving complex problems through clean, efficient code.</p>
-        <p>When I'm not coding, you can find me exploring new technologies, reading tech blogs, or working on personal
-            projects that challenge my skills and push my boundaries.</p>
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a passionate full-stack developer who loves creating amazing web experiences.
+                        I enjoy working with modern technologies and solving complex problems through clean, efficient
+                        code.
+                    </p>
+                    <p class="about-details">
+                        When I'm not coding, you can find me exploring new technologies, reading tech blogs,
+                        or working on personal projects that challenge my skills and push my boundaries.
+                    </p>
+                </div>
+                <div class="skills-container">
+                    <h3 class="skills-title">Skills & Technologies</h3>
+                    <div class="skills">
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">HTML & CSS</div>
+                        <div class="skill-item">React</div>
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Git</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <div class="skills">
-            <div class="skill-item">JavaScript</div>
-            <div class="skill-item">HTML & CSS</div>
-            <div class="skill-item">React</div>
-            <div class="skill-item">Node.js</div>
-            <div class="skill-item">Python</div>
-            <div class="skill-item">Git</div>
+    <div id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Portfolio Website</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live</a>
+                            <a href="#" class="project-link">Code</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A responsive portfolio website built with HTML, CSS, and JavaScript
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Coming Soon</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link disabled">Live</a>
+                            <a href="#" class="project-link disabled">Code</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Exciting new project in development. Stay tuned!
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div id="contact" class="section contact-section">
-        <h2>Get In Touch</h2>
-        <p style="color: #555; margin-bottom: 40px; font-size: 18px;">
-            Feel free to reach out for collaborations or just a friendly hello!
-        </p>
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-intro">
+                Feel free to reach out for collaborations or just a friendly hello!
+            </p>
 
-        <div class="contact-info">
-            <a href="mailto:aayush@email.com" class="contact-item">
-                <h3>📧 Email</h3>
-                <p>aayush@email.com</p>
-            </a>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:aayush@email.com">aayush@email.com</a>
+                        </div>
+                    </div>
 
-            <a href="https://linkedin.com/in/aayush" class="contact-item">
-                <h3>💼 LinkedIn</h3>
-                <p>Connect with me</p>
-            </a>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/aayush" target="_blank">Connect with me</a>
+                        </div>
+                    </div>
 
-            <a href="https://github.com/aayush" class="contact-item">
-                <h3>💻 GitHub</h3>
-                <p>Check out my projects</p>
-            </a>
+                    <div class="contact-item">
+                        <div class="contact-icon">💻</div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/aayush" target="_blank">Check out my projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="footer" class="footer">
-        <p>© 2025 Aayush. Made with ❤️ and lots of coffee.</p>
-        <p>Always learning, always growing.</p>
-    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Aayush. Made with ❤️ and lots of coffee.</p>
+                <p class="footer-tagline">Always learning, always growing.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
