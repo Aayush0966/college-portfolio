@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <button id="backToTop" class="back-to-top" style="display: none;">↑</button>
+
     <div class="header">
         <div class="logo">
             <h1>Aayush</h1>
@@ -17,9 +19,13 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#media">Media</a>
+            <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
         </nav>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
         <div class="menu-toggle">
             <span></span>
             <span></span>
@@ -52,16 +58,55 @@
                         or working on personal projects that challenge my skills and push my boundaries.
                     </p>
                 </div>
-                <div class="skills-container">
-                    <h3 class="skills-title">Skills & Technologies</h3>
-                    <div class="skills">
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">HTML & CSS</div>
-                        <div class="skill-item">React</div>
-                        <div class="skill-item">Node.js</div>
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">Git</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="90"></div>
                     </div>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">HTML & CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="95"></div>
+                    </div>
+                    <span class="skill-percentage">95%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">React</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="80"></div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Node.js</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="75"></div>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Python</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="85"></div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Git</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="88"></div>
+                    </div>
+                    <span class="skill-percentage">88%</span>
                 </div>
             </div>
         </div>
@@ -71,40 +116,127 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-url="https://github.com/Aayush0966/college-portfolio">
                     <div class="project-header">
                         <h3>Portfolio Website</h3>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live</a>
-                            <a href="#" class="project-link">Code</a>
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span>Live</span>
                         </div>
                     </div>
                     <p class="project-description">
-                        A responsive portfolio website built with HTML, CSS, and JavaScript
+                        A responsive portfolio website built with HTML, CSS, and JavaScript featuring interactive elements and modern design
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
                         <span class="tech-tag">JavaScript</span>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-url="https://aayush0966.github.io/todo-react/">
                     <div class="project-header">
-                        <h3>Coming Soon</h3>
-                        <div class="project-links">
-                            <a href="#" class="project-link disabled">Live</a>
-                            <a href="#" class="project-link disabled">Code</a>
+                        <h3>Task react</h3>
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span>Live</span>
                         </div>
                     </div>
                     <p class="project-description">
-                        Exciting new project in development. Stay tuned!
+                        A full-stack task management application with user authentication and real-time updates
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Node.js</span>
                         <span class="tech-tag">MongoDB</span>
                     </div>
+                </div>
+
+                <div class="project-card" data-url="https://github.com/Aayush0966/React-Weather-Dashboard">
+                    <div class="project-header">
+                        <h3>Weather Dashboard</h3>
+                        <div class="project-status">
+                            <span class="status-indicator live"></span>
+                            <span>Live</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Interactive weather application with location-based forecasts and beautiful visualizations
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">Chart.js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="media" class="section media-section">
+        <div class="container">
+            <h2 class="section-title">Media & Interactive Content</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <h3>Introduction Video</h3>
+                    <video controls width="100%" preload="metadata">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="media-item">
+                    <h3>Background Music</h3>
+                    <audio controls width="100%">
+                        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                
+                <div class="media-item canvas-container">
+                    <h3>Interactive Canvas</h3>
+                    <canvas id="drawingCanvas" width="400" height="200">
+                        Your browser does not support the canvas element.
+                    </canvas>
+                    <div class="canvas-controls">
+                        <button id="clearCanvas">Clear Canvas</button>
+                        <input type="color" id="colorPicker" value="#2563eb">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery" class="section gallery-section">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="image-slider">
+                <div class="slider-container">
+                    <div class="slide active">
+                        <img src="https://picsum.photos/800/400?random=1" alt="Gallery Image 1">
+                        <div class="slide-caption">Project Development Process</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/800/400?random=2" alt="Gallery Image 2">
+                        <div class="slide-caption">Team Collaboration</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/800/400?random=3" alt="Gallery Image 3">
+                        <div class="slide-caption">Final Product Showcase</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/800/400?random=4" alt="Gallery Image 4">
+                        <div class="slide-caption">User Experience Design</div>
+                    </div>
+                </div>
+                <button class="slider-btn prev" id="prevBtn">❮</button>
+                <button class="slider-btn next" id="nextBtn">❯</button>
+                <div class="slider-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
                 </div>
             </div>
         </div>
@@ -143,6 +275,32 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="contact-form-container">
+                    <h3>Send me a message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <div id="formStatus" class="form-status"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -152,10 +310,26 @@
             <div class="footer-content">
                 <p>© 2025 Aayush. Made with ❤️ and lots of coffee.</p>
                 <p class="footer-tagline">Always learning, always growing.</p>
+                
+                <div class="layout-explanation">
+                    <h4>Layout Technologies Used</h4>
+                    <div class="layout-info">
+                        <div class="layout-item">
+                            
+                            <h5>Flexbox</h5>
+                            <p>Used for one-dimensional layouts like navigation bars, button groups, and centering content. Perfect for distributing space along a single axis.</p>
+                        </div>
+                        <div class="layout-item">
+                            <h5>CSS Grid</h5>
+                            <p>Used for two-dimensional layouts like the projects grid and skills section. Ideal for complex layouts with rows and columns.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

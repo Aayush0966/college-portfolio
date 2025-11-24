@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Details - Aayush</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>Aayush</h1>
+        </div>
+        <nav>
+            <a href="index.html">Back to Portfolio</a>
+        </nav>
+    </div>
+
+    <div class="form-details-container">
+        <div class="container">
+            <h1>Thank You for Your Message!</h1>
+            <div class="submission-details">
+                <div class="detail-card">
+                    <h3>Submission Details</h3>
+                    <div id="submissionData">
+                        
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button onclick="window.location.href='index.html'" class="btn-primary">
+                        Back to Portfolio
+                    </button>
+                    <button onclick="clearData()" class="btn-secondary">
+                        Clear Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            const formData = JSON.parse(localStorage.getItem('contactFormData'));
+            const submissionDataDiv = document.getElementById('submissionData');
+            
+            if (formData) {
+                submissionDataDiv.innerHTML = `
+                    <div class="data-item">
+                        <label>Name:</label>
+                        <span>${formData.name}</span>
+                    </div>
+                    <div class="data-item">
+                        <label>Email:</label>
+                        <span>${formData.email}</span>
+                    </div>
+                    <div class="data-item">
+                        <label>Message:</label>
+                        <span>${formData.message}</span>
+                    </div>
+                    <div class="data-item">
+                        <label>Submitted at:</label>
+                        <span>${formData.timestamp}</span>
+                    </div>
+                `;
+            } else {
+                submissionDataDiv.innerHTML = `
+                    <div class="no-data">
+                        No form data found. Please submit the contact form first.
+                    </div>
+                `;
+            }
+        });
+
+        function clearData() {
+            localStorage.removeItem('contactFormData');
+            document.getElementById('submissionData').innerHTML = `
+                <div class="no-data">
+                    Data cleared successfully.
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
